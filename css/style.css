@@ -5,6 +5,16 @@ body {
     background-color: #F3F2F0;
     color: #010101;
 }
+.light .nav-link {
+    color: #010101;
+}
+.dark {
+    background-color: #232326;
+    color: #F3F2F0;
+}
+.dark .nav-link {
+    color: #F3F2F0;
+}
 .wrapper {
     max-width: 1140px;
     margin: 0 auto;
@@ -22,10 +32,31 @@ body {
     margin-bottom: 120px;
     width: 100%;
 }
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+.nav {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+.nav-item {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.nav-item:first-child {
+    padding-left: 0;
+}
+.nav-item:last-child {
+    padding-right: 0;
+}
 .nav-link {
     text-decoration: none;
     font-size: 14px;
-    color: #010101;
 }
 .nav-link:hover {
     color: #D40000;
