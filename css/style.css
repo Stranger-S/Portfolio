@@ -6,15 +6,39 @@ body {
     background-color: #F3F2F0;
     color: #010101;
 }
+.light .project-img {
+    background-image: url(../img/arrow1.svg);
+}
+.light .circle circle {
+    fill: #FFFFFF;
+}
+.light .triangle path {
+    fill: #D40000;
+}
 .light .nav-link {
     color: #010101;
+}
+.light .nav-info .nav-item::before {
+    background-color: rgba(1, 1, 1, 0.2);
 }
 .dark {
     background-color: #232326;
     color: #F3F2F0;
 }
+.dark .project-img {
+    background-image: url(../img/arrow2.svg);
+}
+.dark .circle circle {
+    fill: #D40000;
+}
+.dark .triangle path {
+    fill: #F3F2F0;
+}
 .dark .nav-link {
     color: #F3F2F0;
+}
+.dark .nav-info .nav-item::before {
+    background-color: rgba(243, 242, 240, 0.5);
 }
 .wrapper {
     max-width: 1140px;
@@ -66,6 +90,21 @@ header {
 .nav-link:hover {
     color: #D40000;
 }
+.nav-info .nav-item {
+    position: relative;
+}
+.nav-info .nav-item::before {
+    content: '';
+    display: block;
+    height: 24px;
+    width: 1px;
+    position: absolute;
+    left: 0;
+    top: calc(50%-12px);
+}
+.nav-info .nav-item:first-child::before {
+    display: none;
+}
 .social {
     display: flex;
     justify-content: space-between;
@@ -86,7 +125,6 @@ header {
     width: 16px;
     height: 12px;
     display: block;
-    background-image: url(../img/arrow1.svg);
     margin-left: 15px;
 }
 .skill {
@@ -102,4 +140,12 @@ header {
 }
 .skill-item {
     flex: 0 0 24%;
+}
+.circle-main {
+    width: 253px;
+    height: 253px;
+}
+.circle-nav {
+    width: 106px;
+    height: 106px;
 }
