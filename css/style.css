@@ -9,6 +9,13 @@ body {
 .light .project-img {
     background-image: url(../img/arrow1.svg);
 }
+.light .social,
+.light .steps-item {
+    border-bottom: 1px solid #010101;
+}
+.light .steps-item:first-child {
+    border-top: 1px solid #010101;
+}
 .light .circle circle {
     fill: #FFFFFF;
 }
@@ -27,6 +34,13 @@ body {
 }
 .dark .project-img {
     background-image: url(../img/arrow2.svg);
+}
+.dark .social,
+.dark .steps-item {
+    border-bottom: 1px solid #F3F2F0;
+}
+.dark .steps-item:first-child {
+    border-top: 1px solid #F3F2F0;
 }
 .dark .circle circle {
     fill: #D40000;
@@ -151,7 +165,7 @@ header {
     line-height: 150%;
 }
 .skill-item {
-    flex: 0 0 24%;
+    flex: 0 0 21%;
 }
 .section-steps {
     padding-top: 180px;
@@ -162,6 +176,8 @@ header {
     justify-content: space-between;
     align-items: center;
     line-height: 150%;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 .steps-title {
     font-size: 28px;
@@ -171,6 +187,8 @@ header {
 }
 .steps-description {
     font-size: 16px;
+    flex: 0 0 49%;
+    max-width: 49%;
 }
 .triangle {
     position: absolute;
