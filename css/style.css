@@ -10,7 +10,9 @@ body {
     background-image: url(../img/arrow1.svg);
 }
 .light .social,
-.light .steps-item {
+.light .steps-item, 
+.light .about-title, 
+.light .about-description {
     border-bottom: 1px solid #010101;
 }
 .light .steps-item:first-child {
@@ -36,7 +38,9 @@ body {
     background-image: url(../img/arrow2.svg);
 }
 .dark .social,
-.dark .steps-item {
+.dark .steps-item, 
+.dark .about-title, 
+.dark .about-description {
     border-bottom: 1px solid #F3F2F0;
 }
 .dark .steps-item:first-child {
@@ -163,6 +167,7 @@ header {
 }
 .skill .description {
     line-height: 150%;
+    opacity: 0.8;
 }
 .skill-item {
     flex: 0 0 21%;
@@ -189,6 +194,7 @@ header {
     font-size: 16px;
     flex: 0 0 49%;
     max-width: 49%;
+    opacity: 0.8;
 }
 .triangle {
     position: absolute;
@@ -210,4 +216,55 @@ header {
     position: absolute;
     right: 38px;
     top: calc(50% - 53px);
+}
+.about {
+    display: grid;
+    grid-template: 229px / repeat(4, 1fr);
+    margin-top: 166px; 
+}
+.about p {
+    margin: 0;
+}
+.about-title {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding-bottom: 60px;
+}
+.about-description {
+    grid-column: 3/5;
+    grid-row: 1/2;
+    font-size: 28px;
+    line-height: 150%;
+    opacity: 0.8;
+    padding-bottom: 60px;
+}
+.about-01 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    padding: 42px 50px 0 0;
+}
+.about-02 {
+    grid-column: 4/5;
+    grid-row: 2/3;
+    padding: 42px 0 0 20px;
+}
+.about-03 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    padding: 42px 50px 0 0;
+}
+.about-04 {
+    grid-column: 4/5;
+    grid-row: 3/4;
+    padding: 42px 0 0 20px;
+}
+.about-item .description {
+    font-size: 14px;
+    line-height: 150%;
+    opacity: 0.8;
 }
