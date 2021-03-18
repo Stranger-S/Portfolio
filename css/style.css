@@ -15,6 +15,9 @@ body {
 .light .about-description {
     border-bottom: 1px solid #010101;
 }
+.light .project:hover {
+    border-bottom: 2px solid #010101;
+}
 .light .steps-item:first-child {
     border-top: 1px solid #010101;
 }
@@ -42,6 +45,9 @@ body {
 .dark .about-title, 
 .dark .about-description {
     border-bottom: 1px solid #F3F2F0;
+}
+.dark .project:hover {
+    border-bottom: 2px solid #F3F2F0;
 }
 .dark .steps-item:first-child {
     border-top: 1px solid #F3F2F0;
@@ -75,6 +81,8 @@ body {
 .main .title-h1 {
     position: relative;
     z-index: 4;
+    margin-top: 40px;
+    letter-spacing: 0.03em;
 }
 .title-h1 {
     font-size: 74px;
@@ -85,14 +93,14 @@ body {
     font-weight: 700;
 }
 .photo {
-    margin-bottom: 120px;
+    margin-bottom: 94px;
     width: 100%;
 }
 header {
     display: flex;
     justify-content: space-between;
-    padding-top: 40px;
-    padding-bottom: 60px;
+    padding-top: 44px;
+    padding-bottom: 63px;
 }
 .nav {
     display: flex;
@@ -101,7 +109,7 @@ header {
     margin: 0;
 }
 .nav-item {
-    padding-left: 16px;
+    padding-left: 13px;
     padding-right: 16px;
 }
 .nav-item:first-child {
@@ -113,6 +121,7 @@ header {
 .nav-link {
     text-decoration: none;
     font-size: 14px;
+    transition: 0.2s color ease;
 }
 .nav-link:hover {
     color: #D40000;
@@ -135,8 +144,8 @@ header {
 .social {
     display: flex;
     justify-content: space-between;
-    margin-top: 100px;
-    padding-bottom: 60px;
+    margin-top: 104px;
+    padding-bottom: 49px;
 }
 .social-item:last-child {
     position: relative;
@@ -144,12 +153,25 @@ header {
 .social-item .nav-link {
     font-size: 16px;
 }
+.social-item .nav-item {
+    padding-left: 28px;
+    padding-right: 28px;
+}
+.social-item .nav-item:first-child {
+    padding-left: 0;
+}
+.social-item .nav-item:last-child {
+    padding-right: 0;
+}
 .project {
     margin: 0;
     display: flex;
     align-items: center;
     font-size: 16px;
     font-weight: 700;
+    padding-bottom: 11px;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s border-bottom ease;
 }
 .project-img {
     width: 16px;
@@ -159,21 +181,23 @@ header {
 }
 .skill {
     display: flex;
-    justify-content: space-between;
-    padding-top: 60px;
+    padding-top: 47px;
 }
 .skill .title-h3 {
     text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 19px;
 }
 .skill .description {
     line-height: 150%;
     opacity: 0.8;
 }
 .skill-item {
-    flex: 0 0 21%;
+    flex: 0 0 22%;
+    margin-right: 39px;
 }
 .section-steps {
-    padding-top: 180px;
+    padding-top: 165px;
     padding-bottom: 198px;
 }
 .steps-item {
@@ -181,14 +205,14 @@ header {
     justify-content: space-between;
     align-items: center;
     line-height: 150%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 .steps-title {
     font-size: 28px;
 }
 .steps-title span {
-    margin-right: 45px;
+    margin-right: 39px;
 }
 .steps-description {
     font-size: 16px;
@@ -199,7 +223,7 @@ header {
 .triangle {
     position: absolute;
     left: -151px;
-    top: 0;
+    top: -21px;
     z-index: 2;
 }
 .circle-main {
@@ -207,7 +231,7 @@ header {
     height: 253px;
     position: absolute;
     left: -128px;
-    top: calc(50% - 128px);
+    top: calc(50% - 137px);
     z-index: 1;
 }
 .circle-nav {
@@ -215,14 +239,14 @@ header {
     height: 106px;
     position: absolute;
     right: 38px;
-    top: calc(50% - 53px);
+    top: calc(50% - 60px);
 }
 .about {
     display: grid;
-    grid-template: 229px / repeat(4, 1fr);
-    margin-top: 166px; 
+    grid-template: 255px / repeat(4, 1fr);
+    margin-top: 139px; 
 }
-.about p {
+.about>p {
     margin: 0;
 }
 .about-title {
@@ -233,7 +257,6 @@ header {
     line-height: 150%;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    padding-bottom: 60px;
 }
 .about-description {
     grid-column: 3/5;
@@ -241,30 +264,31 @@ header {
     font-size: 28px;
     line-height: 150%;
     opacity: 0.8;
-    padding-bottom: 60px;
+    padding-left: 10px;
 }
 .about-01 {
     grid-column: 3/4;
     grid-row: 2/3;
-    padding: 42px 50px 0 0;
+    padding: 47px 50px 0 10px;
 }
 .about-02 {
     grid-column: 4/5;
     grid-row: 2/3;
-    padding: 42px 0 0 20px;
+    padding: 47px 0 0 15px;
 }
 .about-03 {
     grid-column: 3/4;
     grid-row: 3/4;
-    padding: 42px 50px 0 0;
+    padding: 33px 50px 0 10px;
 }
 .about-04 {
     grid-column: 4/5;
     grid-row: 3/4;
-    padding: 42px 0 0 20px;
+    padding: 33px 0 0 15px;
 }
 .about-item .description {
     font-size: 14px;
     line-height: 150%;
     opacity: 0.8;
+    margin-top: 23px;
 }
