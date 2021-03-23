@@ -55,6 +55,10 @@ body {
 .light .tarif-list-item::before {
     background: #010101;
 }
+.light .tech, 
+.light .tech-item {
+    border: 1px solid rgba(1, 1, 1, 0.3);
+}
 .dark {
     background-color: #232326;
     color: #F3F2F0;
@@ -105,6 +109,10 @@ body {
 }
 .dark .tarif-list-item::before {
     background: #F3F2F0;
+}
+.dark .tech, 
+.dark .tech-item {
+    border: 1px solid rgba(243,242,240,0.3);
 }
 .wrapper {
     max-width: 1140px;
@@ -464,7 +472,6 @@ header {
     display: grid;
     grid-template: 148px 148px/repeat(4, 1fr);
     text-align: center;
-    border: 1px solid rgba(243,242,240,0.3);
 }
 .tech-item {
     /*border-bottom: 1px solid rgba(243,242,240,0.3);
@@ -472,7 +479,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgba(243,242,240,0.3);
 }
 /*.html, .css, .js, .jquery {
     border-top: 1px solid rgba(243,242,240,0.3);
@@ -480,12 +486,17 @@ header {
 .tech-image {
     filter: grayscale(100%);
     transition: 0.2s ease;
+    opacity: 0.3;
 }
-.tech-item:hover {
+.dark .tech-item:hover {
     border: 1px solid rgba(243,242,240,1);
+}
+.light .tech-item:hover {
+    border: 1px solid rgba(1, 1, 1, 0.5);
 }
 .tech-item:hover .tech-image {
     filter: grayscale(0);
+    opacity: 1;
 }
 .ui-tooltip {
     background-color: #E31B1B;
