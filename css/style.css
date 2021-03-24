@@ -14,7 +14,9 @@ body {
 .light .about-title, 
 .light .about-description,
 .light .work, 
-.light .tarif-item {
+.light .tarif-item, 
+.light .tarif-title, 
+.light .tarif-description {
     border-bottom: 1px solid #010101;
 }
 .light .project:hover {
@@ -71,7 +73,9 @@ body {
 .dark .about-title, 
 .dark .about-description,
 .dark .work, 
-.dark .tarif-item {
+.dark .tarif-item, 
+.dark .tarif-title, 
+.dark .tarif-description {
     border-bottom: 1px solid #F3F2F0;
 }
 .dark .project:hover {
@@ -357,6 +361,20 @@ header {
     top: -322px;
     left: 349px;
 }
+.circle-tarif {
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    left: -70px;
+    top: calc(50% - 70px);
+}
+.circle-price {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    left: -45px;
+    top: calc(50% - 45px);
+}
 #tabs {
     position: relative;    
 }
@@ -474,15 +492,10 @@ header {
     text-align: center;
 }
 .tech-item {
-    /*border-bottom: 1px solid rgba(243,242,240,0.3);
-    border-right: 1px solid rgba(243,242,240,0.3);*/
     display: flex;
     justify-content: center;
     align-items: center;
 }
-/*.html, .css, .js, .jquery {
-    border-top: 1px solid rgba(243,242,240,0.3);
-}*/
 .tech-image {
     filter: grayscale(100%);
     transition: 0.2s ease;
@@ -524,15 +537,19 @@ header {
     border-bottom: 10px solid #E31B1B;
 }
 .section-tarif {
-    padding-top: 148px;
+    padding-top: 175px;
     padding-bottom: 20px;
 }
 .tarif {
     display: grid;
-    grid-template: 276px repeat(3, 363px)/ 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 .tarif-item {
-    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 298px;
+    padding-bottom: 64px;
 }
 .tarif-item:nth-child(7), 
 .tarif-item:last-child {
@@ -547,40 +564,50 @@ header {
     line-height: 150%;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    padding-top: 0;
+}
+.tarif-title>div {
+    position: relative;
+}
+.tarif-title p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
 }
 .tarif-description {
     font-size: 28px;
     line-height: 150%;
     opacity: 0.8;
-    padding-top: 0;
+    padding-left: 10px;
+    padding-bottom: 80px;
+}
+.tarif-description p {
+    margin: 0;
 }
 .tarif-name {
     font-size: 28px;
     line-height: 150%;
-    margin: 0;
+    margin-top: 60px;
+    margin-bottom: 20px;
 }
 .tarif-text {
     font-size: 16px;
     line-height: 150%;
     opacity: 0.8;
-    margin-top: 20px;
 }
 .tarif .project {
     display: inline-flex;
-    margin-top: 62px;
 }
 .tarif-pack {
     font-size: 16px;
     line-height: 150%;
     font-weight: 700;
-    margin: 0;
+    margin-top: 60px;
+    margin-bottom: 20px;
 }
 .tarif-list {
     list-style-type: none;
     padding-left: 0;
     margin: 0;
-    padding-top: 20px;
 }
 .tarif-list-item {
     position: relative;
@@ -603,4 +630,11 @@ header {
     font-weight: 700;
     font-size: 42px;
     line-height: 150%;
+}
+.tarif-footer {
+    position: relative;
+}
+.tarif-footer p {
+    position: relative;
+    z-index: 1;
 }
