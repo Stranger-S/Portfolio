@@ -84,6 +84,13 @@ body {
 .light .footer-bottom p {
     color: rgba(1, 1, 1, 0.3);
 }
+.light .ui-selectmenu-menu .ui-menu {
+    background-color: #E7E6E4;
+    color: rgba(1, 1, 1, 0.4);
+}
+.light .ui-menu .ui-menu-item:hover {
+    color: #010101;
+}
 .dark {
     background-color: #232326;
     color: #F3F2F0;
@@ -164,6 +171,13 @@ body {
 .dark .footer-link:hover {
     color: rgba(243,242,240,1);
     border-bottom: 1px solid rgba(243,242,240,1);
+}
+.dark .ui-selectmenu-menu .ui-menu {
+    background-color: #38383A;
+    color: rgba(243,242,240,0.4);
+}
+.dark .ui-menu .ui-menu-item:hover {
+    color: #F3F2F0;
 }
 .wrapper {
     max-width: 1140px;
@@ -804,8 +818,6 @@ form input[type=submit]:hover {
     outline: none;
 }
 .ui-selectmenu-menu .ui-menu {
-    background-color: #38383A;
-    color: rgba(243,242,240,0.4);
     box-sizing: border-box;
     border-radius: 0;
 }
@@ -814,9 +826,6 @@ form input[type=submit]:hover {
     padding-left: 5px;
     font-size: 12px;
     line-height: 150%;
-}
-.ui-menu .ui-menu-item:hover {
-    color: #F3F2F0;
 }
 .footer-top {
     display: flex;
@@ -858,6 +867,14 @@ form input[type=submit]:hover {
     .menu {
         background-color: transparent;
         border: none;
+        height: 20px;
+        width: 26px;
+    }
+    .dark .menu {
+        background-image: url(../img/icons/burger.svg);
+    }
+    .light .menu {
+        background-image: url(../img/icons/burger_black.svg);
     }
     .triangle {
         left: 0px;
